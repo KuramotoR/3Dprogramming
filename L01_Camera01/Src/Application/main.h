@@ -51,8 +51,11 @@ private:
 	// ゲーム終了フラグ trueで終了する
 	bool		m_endFlag = false;
 
-	// ※※※絶対消す※※※
-	int m_test;
+	// カメラ
+	std::shared_ptr<KdCamera> m_spCamera = nullptr;		// 生ポインタを使いやすくしたもの	※スマートポインタ
+
+	// ポリゴン
+	std::shared_ptr<KdSquarePolygon> m_spPoly = nullptr;
 
 //=====================================================
 // シングルトンパターン
